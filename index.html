@@ -1,0 +1,545 @@
+<!-- index.html 
+- - - - - - - - - -
+by Maxime Hugonnet-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>WEBAGENCY: l'agence de tous vos projets web!</title>
+		<meta name="description" content="Agence web créative à Paris, stratégie digitale et communication interactive. Notre agence réalise et vous accompagne sur vos projets.">
+
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@publisher_handle">
+		<meta name="twitter:title" content="WEBAGENCY: l'agence de tous vos projets web!">
+		<meta name="twitter:description" content="Agence web créative à Paris, stratégie digitale et communication interactive. Notre agence réalise et vous accompagne sur vos projets.">
+		<meta name="twitter:creator" content="@author_handle">
+		<!-- Twitter Summary card images must be at least 200x200px -->
+		<meta name="twitter:image" content="http://www.maxime-hugonnet.fr/openclassrooms/webagency/images/captures/index.png">
+
+		<!-- Open Graph data -->
+		<meta property="og:title" content="WEBAGENCY"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="http://www.maxime-hugonnet.fr/openclassrooms/webagency/index.html"/>
+		<meta property="og:image" content="http://www.maxime-hugonnet.fr/openclassrooms/webagency/images/captures/index.png"/>
+		<meta property="og:description" content="Agence web créative à Paris, stratégie digitale et communication interactive. Notre agence réalise et vous accompagne sur vos projets."/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="style.css" />
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="images/ico/favicon.png" />
+		<!--Font-awesome-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	</head>
+
+<body>
+<!-- Header -->
+	<header id="accueil">
+		<div id="logo_menu1">
+			<div id="logo">
+				<img src="images/logo.png" alt="WEBAGENCY" title="WEBAGENCY" /><!-- Logo WEBAGENCY -->
+			</div>
+
+				<nav id="menu1"><!-- Menu 1 -->
+					
+					<input type="checkbox" id="input_toggle" ><!--burger ico-->
+				    <label for="input_toggle" id="label_toggle" onclick="changeMenuIcon()">Menu<i></i><i></i><i></i><i></i></label><!-- burger menu -->
+
+					<ul class="ul1"><!-- menu  -->
+						<li class="li1"><a class="a1" href="#slides"><span>Accueil</span></a></li>
+						<li class="li1"><a class="a1" href="#services">Services</a></li>
+						<li class="li1"><a class="a1" href="#portfolio">Portfolio</a></li>
+						<li class="li1"><a class="a1" href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+<!-- Section 1 accueil -->
+			<div id="slider"><!-- slider -->
+
+			  <input type="radio" name="sl_anchor" id="radio_slide_0"  class="radio_slide" /><!-- slider -->
+			  <input type="radio" name="sl_anchor" id="radio_slide_1"  class="radio_slide" />
+			  <input type="radio" name="sl_anchor" id="radio_slide_2"  class="radio_slide" />
+			  <input type="radio" name="sl_anchor" id="radio_play"     checked="" /><!-- play -->
+
+			  <ul id="slides"><!-- slider 1 -->
+			    <li class="slide num0">
+			      <img src="images/slider/bg1.jpg" alt="enfant riant avec les mains couvertes de peintures vives"/>
+						<div class="caption">
+							<p class="slogan"> <em>WebAgency</em><span class="colon">:</span> L'agence de tous vos projets<span class="interrobang">!</span> </p>
+							<p class="sub_slogan"> Vous avez un <strong>projet web</strong><span class="interrobang">?</span> La WebAgency vous aide à le réaliser<span class="interrobang">!</span> </p>
+							<a href="#services"> Plus d'infos </a>
+						</div>
+			    </li>
+			   	<li class="slide num1"> <!-- slider 2 -->
+			      <img src="images/slider/bg2.jpg" alt="enfant criant dans un mégaphone" />
+						<div class="caption">
+							<p class="slogan"> <em> WebAgency</em><span class="colon">:</span> Une agence web reconnue<span class="interrobang">!</span></p>
+							<p class="sub_slogan"> Solutions <strong>creatives</strong>, <strong>corporates</strong>, découvrez toutes nos réalisations<span class="interrobang">!</span> </p>
+							<a href="#portfolio"> Plus d'infos </a>
+						</div>
+			    </li>
+			  </ul> 
+
+				<nav>
+					<div class="sl_play">
+						<label for="radio_play"><!-- démarrage du slider  -->
+				      <i class="fa fa-play" aria-hidden="true"></i>
+				    </label>
+					</div>
+
+				  <div class="sl_arrowprev"><!-- slider bouton prev -->
+				    <label class="num0" for="radio_slide_0"></label>
+				    <label class="num1" for="radio_slide_1"></label>
+				  </div>
+
+				  <div class="sl_arrownext"><!-- slider bouton next -->
+				    <label class="num0" for="radio_slide_0"></label>
+				    <label class="num1" for="radio_slide_1"></label>
+				  </div>
+
+				  <div class="sl_markers">
+				    <label class="num0" for="radio_slide_0">
+				        <span class="sl_marker"></span>
+				    </label>
+				    <label class="num1" for="radio_slide_1">
+				      <span class="sl_marker"></span>
+				    </label>
+				  </div>
+				</nav>
+			</div> 
+	</header>
+
+<!-- Section 2 Nos services -->
+		<section id="services"><!--services-->
+			<div id="ti_services">
+				<div class="te_services">
+					<h2>NOS SERVICES</h2><!-- Titre et présentation -->
+					<div class="section_title_underline"><!--puce-->
+						<span class="outer-line"></span><i class="fa fa-circle fa" aria-hidden="true"></i><span class="outer-line"></span>
+					</div>
+				</div>
+
+				<div class="te_services">
+					<p class="txp">Nous sommes une agence web, nous concevons des solutions simples et ergonomiques.</p>
+				</div>
+			</div>
+
+			<!-- Illustration & Services descriptions -->
+			<div class="flex">
+
+				<!-- Illustration -->
+				<div class="main_feature">
+					<img src="images/main-feature.png" alt="image création web" />
+				</div>
+
+				<!-- Services descriptions -->
+				<ul class="services">
+
+					<!-- UX design -->
+					<li class="service flex">
+						<span class="service_icon">
+							<i class="fa fa-line-chart fa-2x" aria-hidden="true"></i>
+							<i class="fa fa-circle fa" aria-hidden="true"></i>
+						</span>
+						<div>
+							<h3>UX design</h3>
+							<p>Nous prenons en compte les <strong>attentes et les besoins de l’utilisateur</strong>
+								pour créer le site web ou l'application la mieux adaptée.
+							</p>
+						</div>
+					</li>
+
+					<!-- UI design -->
+					<li class="service flex">
+						<span class="service_icon">
+							<i class="fa fa-cubes fa-2x" aria-hidden="true"></i>
+							<i class="fa fa-circle fa" aria-hidden="true"></i>
+						</span>
+						<div>
+							<h3>UI design</h3>
+							<p>Nos solutions sont belles, avec un <strong>design fonctionnel</strong>, qui inspire confiance
+								et qui permet à l’utilisateur de <strong>concrétiser son action</strong> simplement.
+							</p>
+						</div>
+					</li>
+
+					<!-- SEO -->
+					<li class="service flex">
+						<span class="service_icon">
+							<i class="fa fa-pie-chart fa-2x" aria-hidden="true"></i>
+							<i class="fa fa-circle fa" aria-hidden="true"></i>
+						</span>
+						<div>
+							<h3>SEO</h3>
+							<p>Être <strong>présent sur les moteurs de recherche</strong> est un élément clé de toute
+								stratégie de <strong>marketing digital</strong>, profitez de notre savoir faire!
+							</p>
+						</div>
+					</li>
+
+				</ul> <!-- end services descriptions -->
+
+			</div> <!-- end Illustration & Services descriptions -->
+		</section>
+
+<!-- Section 3 Nos projets-->
+		<section id="portfolio">
+			<div id="projets">
+				<div class="ti_projets"> 
+					<h2 id="port">NOS PROJETS</h2> <!-- Titre et présentation -->
+					<div class="section_title_underline"><!--puce-->
+						<span class="outer-line"></span><i class="fa fa-circle fa" aria-hidden="true"></i><span class="outer-line"></span>
+					</div>
+				</div>
+				<div class="ti_projets">
+					<p class="txp">Sites web responsives, boutiques e-commerce, solutions métier... 
+					Découvrez les derniers projets web sur lesquels nous avons eu le plaisir de travailler.</p> 
+				</div>
+			</div>
+
+			<div id="tabs">
+
+				<div class="tab"><!-- All Works-->
+					<input type="radio" id="tab-1" name="tab-group-1" checked>
+					<label for="tab-1">All Works <i class="fa fa-caret-down" aria-hidden="true"></i> </label>
+					
+					<div class="content">
+						<ul class="flex">
+
+							<li class="project">
+								<img alt="Illutration lunettes et sourcils noir sur un nez" src="images/portfolio/01.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>All Works</h3>
+									<p>Création d'une identité visuelle claire</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Illustration d'un homme avec un costume de lapin offrant un cadeaux" src="images/portfolio/02.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>All Works</h3>
+									<p>Création d'une appli de géolocalisation d'œufs de pâques</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt='Logo "original vintage"' src="images/portfolio/03.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>All Works</h3>
+									<p>Création et intégration d'un nouveau logo original mais vintage</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Photo d'un dossier technique" src="images/portfolio/04.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>All Works</h3>
+									<p>Réalisation d'un intranet corporate multinational</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Photos de sacs de shopping" src="images/portfolio/05.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>All Works</h3>
+									<p>Création d'un site de vente en ligne de sacs de shopping</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Illustration d'art futuro-minimaliste" src="images/portfolio/06.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>All Works</h3>
+									<p>Réalisation d'un site de contemplation d'art chronometrée</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Illustration d'une fusée au décollage stylisée" src="images/portfolio/07.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>All Works</h3>
+									<p>Réalisation d'un comparateur de vol spatiaux</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Un bureau avec tous ses ustensils de travail rangés au carré" src="images/portfolio/08.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>All Works</h3>
+									<p>Création de widgets CMS pour un bureau au carré</p>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+
+				</div> 
+
+				<div class="tab"><!-- Creative -->
+					<input type="radio" id="tab-2" name="tab-group-1">
+					<label for="tab-2">Creative <i class="fa fa-caret-down" aria-hidden="true"></i> </label>
+
+					<div class="content">
+						<ul class="flex">
+
+							<li class="project">
+								<img alt="Illutration lunettes et sourcils noir sur un nez" src="images/portfolio/01.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Creative</h3>
+									<p>Création d'une identité visuelle claire</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt='Logo "original vintage"' src="images/portfolio/03.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Creative</h3>
+									<p>Création et intégration d'un nouveau logo original mais vintage</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Photos de sacs de shopping" src="images/portfolio/05.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Creative</h3>
+									<p>Création d'un site de vente en ligne de sacs de shopping</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Illustration d'art futuro-minimaliste" src="images/portfolio/06.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Creative</h3>
+									<p>Réalisation d'un site de contemplation d'art chronometrée</p>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+
+				</div> 
+
+
+				<div class="tab"><!-- Corporate -->
+					<input type="radio" id="tab-3" name="tab-group-1">
+					<label for="tab-3">Corporate <i class="fa fa-caret-down" aria-hidden="true"></i> </label>
+
+					<div class="content">
+						<ul class="flex">
+
+							<li class="project">
+								<img alt="Photo d'un dossier technique" src="images/portfolio/04.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Corporate</h3>
+									<p>Réalisation d'un intranet corporate multinational</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Photos de sacs de shopping" src="images/portfolio/05.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Corporate</h3>
+									<p>Création d'un site de vente en ligne de sacs de shopping</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Illustration d'une fusée au décollage stylisée" src="images/portfolio/07.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Corporate</h3>
+									<p>Réalisation d'un comparateur de vol spatiaux</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Un bureau avec tous ses ustensils de travail rangés au carré" src="images/portfolio/08.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Corporate</h3>
+									<p>Création de widgets CMS pour un bureau au carré</p>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="tab"><!-- Portfolio -->
+					<input type="radio" id="tab-4" name="tab-group-1">
+					<label for="tab-4">Portfolio <i class="fa fa-caret-down" aria-hidden="true"></i> </label>
+
+					<div class="content">
+						<ul class="flex">
+
+							<li class="project">
+								<img alt="Illutration lunettes et sourcils noir sur un nez" src="images/portfolio/01.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Portfolio</h3>
+									<p>Création d'une identité visuelle claire</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Illustration d'un homme avec un costume de lapin offrant un cadeaux" src="images/portfolio/02.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Portfolio</h3>
+									<p>Création d'une appli de géolocalisation d'œufs de pâques</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt='Logo "original vintage"' src="images/portfolio/03.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Portfolio</h3>
+									<p>Création et intégration d'un nouveau logo original mais vintage</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Photo d'un dossier technique" src="images/portfolio/04.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Portfolio</h3>
+									<p>Réalisation d'un intranet corporate multinational</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Photos de sacs de shopping" src="images/portfolio/05.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Portfolio</h3>
+									<p>Création d'un site de vente en ligne de sacs de shopping</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Illustration d'art futuro-minimaliste" src="images/portfolio/06.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Portfolio</h3>
+									<p>Réalisation d'un site de contemplation d'art chronometrée</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Illustration d'une fusée au décollage stylisée" src="images/portfolio/07.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Portfolio</h3>
+									<p>Réalisation d'un comparateur de vol spatiaux</p>
+								</div>
+							</li>
+
+							<li class="project">
+								<img alt="Un bureau avec tous ses ustensils de travail rangés au carré" src="images/portfolio/08.jpg" />
+								<div class="project_description">
+									<span class="eye_icon">
+										<i class="fa fa-eye fa-stack-1x" aria-hidden="true"></i>
+									</span>
+									<h3>Portfolio</h3>
+									<p>Création de widgets CMS pour un bureau au carré</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</div> 
+
+			</div>
+	</section>
+
+<!-- Section 4 Infos/contact/maps -->
+		<!-- Formulaire de contact -->
+	<section id="contact">
+        <!-- Image de fond : image Google Maps de la localisation -->
+        <iframe class="google_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5248.431204606119!2d2.3454415680663883!3d48.873166307519575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145cb52f15%3A0x4d3ec41b2cadff0!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1484233326288" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div id="conteneur_contact">
+             <form>
+                <h2>Nous Contacter</h2>
+                <p><span>WebAgency SAS</span><br/>25 rue d'Hauteville, 75010 PARIS<br/>Tél : 01 02 03 04 05</p>
+                <input type="text" name="name" placeholder="Nom"/>
+                <input type="text" name="email" placeholder="E-mail" />
+                <input type="text" name="subject"  placeholder="Sujet"/>
+                <textarea name="message" placeholder="Message"></textarea>
+                <p><a href="#" class="bouton" title="Envoyer votre message">Envoyer</a></p>
+            </form>  
+        </div>
+	</section>
+
+<!-- Footer -->
+	<footer>
+		<div class="p_page">
+			<p>Site réalisé par HGTProduction</p>
+		</div>
+	</footer>
+</body>
+</html>

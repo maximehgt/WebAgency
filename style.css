@@ -1,0 +1,1240 @@
+/* style.css
+- - - - - - - - - -
+by Maxime Hugonnet 
+----------
+1 -------------------- Général --------------------
+2 -------------------- Header --------------------
+3 -------------------- Section 1 accueil --------------------
+4 -------------------- Section 2 Nos services --------------------
+5 -------------------- Section 3 Nos projets --------------------
+6 -------------------- Section 4 Infos/contact/maps --------------------
+7 -------------------- Footer --------------------
+8 -------------------- Medias --------------------
+*/
+
+/* 1 ------------------------------ Général ------------------------------ */
+
+@font-face {/*Police roboto*/
+    font-family: 'robotoregular';
+    src: url('fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot');
+    src: url('fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body /*Police*/
+{
+    font-family: 'robotoregular', Verdana, Georgia, Arial, sans-serif;
+}
+
+body /*toute la page marge*/
+{
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+
+ul /*on enlève les puces*/
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a, p, label /*couleur du text*/
+{
+    color: #555;
+}
+
+a:hover /*couleur au survol*/
+{
+    color: #5CADD3;
+}
+
+#services h2, #portfolio h2 /*taille des titres*/
+{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.txp/*texte en gras*/
+{
+    font-weight: bold;
+}
+
+.bold /*texte en gras*/
+{
+    font-weight: bold;
+}
+
+strong:not(.bold) /*strong écris en normal*/
+{
+    font-weight: normal;
+}
+
+.flex /*pour les images*/
+{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+        -webkit-justify-content: space-around;
+    align-items: center;
+        -webkit-align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+section#services, section#portfolio /*block section*/
+{
+ padding-left: 20px;
+ padding-right: 20px;
+}
+
+section#services > p, section#portfolio > p /*block section paragraphe*/
+{
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.section_title_underline /*dessous de titre*/
+{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.section_title_underline span, .section_title_underline i /*dessous de titre*/
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.section_title_underline i /*dessous de titre*/
+{
+    height: 16px;
+    width: 16px;
+    color: #5CADD3;
+    background-color: white;
+    border-radius: 50%;
+    border: solid white 4px;
+}
+
+.section_title_underline .outer-line /*dessous de titre*/
+{
+    width: 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+#input_toggle, #label_toggle /* hamburger icon */
+{
+    display: none;
+}
+
+#label_toggle /* hamburger icon */
+{
+    display: none;
+    position: relative;
+    width: 35px;
+    height: 30px;
+    margin: 25px -200px 0 10px;
+    transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+    transition: .2s linear;
+      -webkit-transition: .2s linear;
+      -moz-transition: .2s linear;
+      -o-transition: .2s linear;
+    cursor: pointer;
+    color: transparent;
+}
+
+#label_toggle i /* hamburger icon */
+{
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #5CADD3;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+    transition: .25s ease-in-out;
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+}
+
+#label_toggle i:nth-child(1) /* hamburger icon */
+{
+    top: 0px;
+}
+
+#label_toggle i:nth-child(2), #label_toggle i:nth-child(3) /* hamburger icon */
+{
+    top: 9px;
+}
+
+#label_toggle i:nth-child(4) /* hamburger icon */
+{
+    top: 18px;
+}
+
+#label_toggle.open i:nth-child(1)/* hamburger icon */ 
+{
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+#label_toggle.open i:nth-child(2) /* hamburger icon */
+{
+    transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+}
+
+#label_toggle.open i:nth-child(3) /* hamburger icon */
+{
+    transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+}
+
+#label_toggle.open i:nth-child(4) /* hamburger icon */
+{
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+/* 2 ------------------------------ Header ------------------------------ */
+#logo_menu1 /*logo et images menu*/
+{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    top: 0px;
+    padding: 5px;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px #656565;
+}
+
+#menu1 /*Menu nav*/
+{
+    display: flex;
+
+}
+
+.ul1 /*liste menu*/
+{
+    display: flex;
+    list-style-type: none;
+
+}
+
+.ul1 .a1 /*liste menu et liens*/
+{
+    display: flex;
+    text-decoration: none;
+    padding: 15px 10px 10px 10px;
+}
+
+.a1:hover /*liens menu survol*/
+{
+    border-top: 1px #5CADD3 solid;
+}
+
+/* 3 ------------------------------ Section 1 accueil ------------------------------ */
+#slider /*mise en place du slider*/
+{
+    position: relative;
+    margin-top: 65px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#slider input /*slider*/
+{
+    display: none;
+}
+
+ul#slides /*slider liste images*/
+{
+    display: inline-flex;
+        display: -webkit-inline-flex;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 200%; /* 100% x 2 images */
+}
+
+li.slide /*slider liste*/
+{
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    transition: transform 1000ms ease;
+        -o-transition: -o-transform 1000ms;
+        -webkit-transition: -webkit-transform 1000ms;
+        -moz-transition: -moz-transform 1000ms;
+}
+
+.slide.num0 /*slider image 1*/
+{
+    left: 0%;
+}
+.slide.num1 /*slider image 2*/
+{
+    left: 100%;
+}
+
+.slide img /*slider images*/
+{
+    width: 100%;
+    vertical-align: middle;
+}
+
+#radio_slide_0:checked ~ #slides li.slide /*slider liste annimation*/
+{
+    transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+}
+
+#radio_slide_1:checked ~ #slides li.slide/*slider liste annimation*/
+{
+    transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+}
+
+#radio_play:checked ~ #slides li.slide/*slider liste annimation*/
+{
+    animation: slide 9000ms infinite;
+        -webkit-animation: slide 9000ms infinite;
+        -moz-animation: slide 9000ms infinite;
+    transition: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+}
+
+@-webkit-keyframes slide 
+{
+    0%, 30% { -webkit-transform: translateX(0%); }
+    50%, 80%    { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes slide 
+{
+    0%, 30% { -moz-transform: translateX(0%); }
+    50%, 80%    { -moz-transform: translateX(-100%); }
+}
+@keyframes slide 
+{
+    0%, 30% { transform: translateX(0%); }
+    50%, 80%    { transform: translateX(-100%); }
+}
+
+.slide .caption /*slider caption slogan*/
+{
+    display: flex;
+        display: -webkit-flex;
+    flex-direction: column;
+        -webkit-flex-direction: column;
+  justify-content: center;
+        -webkit-justify-content: center;
+    position: absolute;
+    top: 0;
+    max-width: 42%;
+    height: 100%;
+    padding-left: 9%;
+}
+
+.slide .caption .slogan /*slider slogan*/
+{
+    display: inline;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.6em;
+    font-size: 2.6vw;
+    line-height: 1em;
+    color: white;
+}
+
+.slide .caption .sub_slogan /*slider slogan*/
+{
+    margin: 16px 0 24px 0;
+    font-size: 0.9em;
+    color: white;
+}
+
+.slide .caption a /*slider slogan*/
+{
+    align-self: flex-start;
+        -webkit-align-self: flex-start;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 2px;
+    border: solid #4ba4ce 1px;
+    background-color: #4ba4ce;
+    padding: 8px 11px;
+    border-bottom: solid 2px #4494BB;
+    transition: all 0.15s ease-out;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        -o-transition: all 0.15s ease-out;
+}
+
+.slide .caption a:hover /*slider slogan*/
+{
+    background-color: #4494BB;
+    border-bottom: solid 2px #3088b0;
+}
+
+.slide .caption em /*slider slogan*/
+{
+    color: #5CADD3;
+    font-style: normal;
+}
+
+.slide .caption .slogan .colon, .slide .caption .slogan .interrobang /*slider slogan*/
+{
+    margin: 0 0 0 4px;
+}
+
+.slide .caption .sub_slogan .interrobang /*slider slogan*/
+{
+    margin: 0 2px
+}
+
+.sl_arrowprev, .sl_arrownext /*flèche slider*/
+{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    opacity: .65;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-size: 36px 70px;
+    transition: opacity 0.2s ease;
+        -webkit-transition: opacity 0.2s ease;
+        -moz-transition: opacity 0.2s ease;
+        -o-transition: opacity 0.2s ease;
+}
+
+.sl_arrowprev:hover, .sl_arrownext:hover /*image slider flèche*/
+{
+    opacity: 1;
+}
+
+.sl_arrowprev /*image slider flèche*/
+{
+    left: 0;
+    background-image: url("images/slider/slider_prev.png");
+    background-position: left;
+}
+
+.sl_arrownext /*image slider flèche*/
+{
+    right: 0;
+    background-image: url("images/slider/slider_next.png");
+    background-position: right;
+}
+
+.sl_arrowprev  label, .sl_arrownext  label /*image slider flèche*/
+{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.sl_arrowprev label, .sl_arrownext label /*image slider flèche*/
+{
+    position: absolute;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0;
+    z-index: -1;
+}
+
+.radio_slide:checked ~ nav .sl_arrowprev label, .radio_slide:checked ~ nav .sl_arrownext label /*image slider flèche*/
+{
+    opacity: 0;
+    z-index: -1;
+}
+
+#radio_slide_0:checked ~ nav .sl_arrowprev label.num1, #radio_slide_0:checked ~ nav .sl_arrownext label.num1,
+#radio_slide_1:checked ~ nav .sl_arrowprev label.num0, #radio_slide_1:checked ~ nav .sl_arrownext label.num0 /*image slider flèche*/
+{
+    opacity: 1;
+    z-index: 2;
+}
+
+.sl_markers /*slide markers*/
+{
+    position: absolute;
+    height: 5px;
+    bottom: 0px;
+    display: flex;
+        display: -webkit-flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    z-index: 6;
+}
+
+.sl_markers label /*slide markers*/
+{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    background-color: rgba(50, 50, 50, 0.2);
+    transition: background-color 0.4s ease;
+        -webkit-transition: background-color 0.4s ease;
+        -moz-transition: background-color 0.4s ease;
+        -o-transition: background-color 0.4s ease;
+}
+
+.sl_markers label:hover /*slide markers*/
+{
+    background-color: rgba(92, 173, 211, 0.7);
+}
+
+#radio_slide_0:checked ~ nav .sl_markers label.num0, #radio_slide_1:checked ~ nav .sl_markers label.num1, #radio_slide_2:checked ~ nav .sl_markers label.num2 
+{/*slide markers*/
+    background-color: rgba(92, 173, 211, 1);
+    transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+}
+
+@-webkit-keyframes marker_1 /* Marker 1 */
+{
+    0%, 30%, 80.1%, 100%    {   background-color: rgba(92, 173, 211, 1); }
+    30.1%, 80% { background-color: rgba(50, 50, 50, 0.2); }
+}
+@-moz-keyframes marker_1
+ {
+    0%, 30%, 80.1%, 100%    {   background-color: rgba(92, 173, 211, 1); }
+    30.1%, 80% { background-color: rgba(50, 50, 50, 0.2); }
+}
+@keyframes marker_1 
+{
+    0%, 30%, 80.1%, 100%    {   background-color: rgba(92, 173, 211, 1); }
+    30.1%, 80% { background-color: rgba(50, 50, 50, 0.2);   }
+}
+
+@-webkit-keyframes marker_2 /* Marker 2 */
+{
+    0%, 30%, 80.1%, 100%    {   background-color: rgba(50, 50, 50, 0.2); }
+    30.1%, 80% { background-color: rgba(92, 173, 211, 1); }
+}
+@-moz-keyframes marker_2 
+{
+    0%, 30%, 80.1%, 100%    { background-color: rgba(50, 50, 50, 0.2); }
+    30.1%, 80% { background-color: rgba(92, 173, 211, 1); }
+}
+@keyframes marker_2 
+{
+    0%, 30%, 80.1%, 100%    { background-color: rgba(50, 50, 50, 0.2); }
+    30.1%, 80% { background-color: rgba(92, 173, 211, 1);   }
+}
+
+#radio_play:checked ~ nav .sl_markers label.num0 /*slider markers*/
+{
+    animation: marker_1 9000ms infinite;
+        -webkit-animation: marker_1 9000ms infinite;
+        -moz-animation: marker_1 9000ms infinite;
+        -o-animation: marker_1 9000ms infinite;
+}
+
+#radio_play:checked ~ nav .sl_markers label.num1 /*slider markers*/
+{
+    animation: marker_2 9000ms infinite;
+        -webkit-animation: marker_2 9000ms infinite;
+        -moz-animation: marker_2 9000ms infinite;
+        -o-animation: marker_2 9000ms infinite;
+}
+
+.sl_play /*play et pause*/
+{
+    display:block;
+    position: absolute;
+    bottom: 17px;
+    right: calc(50% - 7px);
+    z-index: 5;
+}
+
+.sl_play label /*play et pause*/
+{
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+        -o-transition: -o-opacity 0.5s;
+        -webkit-transition: -webkit-opacity 0.5s;
+        -moz-transition: -moz-opacity 0.5s;
+}
+
+.radio_slide:checked ~ nav .sl_play label /*play et pause*/
+{
+    display: block;
+    visibility: visible;
+    z-index: 5;
+    color: #fff;
+    opacity: 0.7;
+    text-align: center
+}
+
+.radio_slide:checked ~ nav .sl_play label:hover /*play et pause*/
+{
+    opacity: 0.9;
+}
+
+#radio_play:checked ~ nav .sl_play label /*play et pause*/
+{
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* 4 ------------------------------ Section 2 Nos services ------------------------------ */
+#services/*section services*/
+{
+    padding-top: 100px;
+    padding-bottom: 190px;
+}
+
+#ti_services/*titre et sous titre*/
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#services > div /*images et services*/
+{
+    max-width: 100%;
+}
+
+#services > div.flex /*images et services*/
+{
+    flex-wrap: wrap;
+}
+
+#services img /*images services*/
+{
+    align-self: center;
+}
+
+.main_feature img /*images et services*/
+{
+    width: 100%;
+}
+
+.te_services/*sous titre*/
+{
+    width: 28%;
+}
+
+#services ul.services /*images et services*/
+{
+    margin-top: 20px;
+    overflow: auto;
+}
+
+#services ul li.services /*images et services*/
+{
+    margin-bottom: 30px;
+}
+
+#services li.service.flex /*images et services*/
+{
+    flex-wrap: wrap;
+    margin-bottom: 34px;
+}
+
+.service .service_icon /*services ico*/
+{
+    position: relative;
+    margin-right: 24px;
+}
+
+.service .service_icon i:first-child /*services ico*/
+{
+    color: #5CADD3;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: solid #D7D7D7 1px;
+    text-align: center;
+    line-height: 65px;
+    vertical-align: middle;
+    padding: 0;
+    font-size: 1.6em;
+}
+
+.service .service_icon i.fa-circle /*services ico*/
+{
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(100% - 10px);
+    color: #5CADD3;
+    background-color: white;
+    border-radius: 50%;
+    border: solid white 2px;
+}
+
+#services li div.flex /*images et services*/
+{
+    flex-wrap: wrap;
+    flex-direction: column;
+        -webkit-flex-direction: column;
+}
+
+#services li h3 /*images et services*/
+{
+    margin: 0 0 4px 0;
+}
+
+#services li p /*images et services*/
+{
+    margin: 0 auto;
+    max-width: 450px;
+}
+
+/* 5 ------------------------------ Section 3 Nos projets ------------------------------ */
+#portfolio/*section services*/
+{
+    padding-top: 100px;
+    padding-bottom: 190px;
+    background-color: #F5F5F5;
+}
+
+#projets/*titre et sous titre*/
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.ti_projets/*sous titre*/
+{
+    width: 35%;
+}
+
+#tabs /*on commence ici les tab et images*/
+{
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+    padding-top: 80px;
+}
+
+.tab /*tab*/
+{
+    width: 100%;
+    margin: 20px;
+}
+
+.tab label /*tab*/
+{
+    display: block;
+    position: absolute;
+    top:0;
+    width: 80px;
+    padding: 10px;
+    overflow: visible;
+    z-index: 3;
+    text-align: center;
+    background: #E5E5E5;
+    transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+}
+
+.tab label:hover /*tab*/
+{
+    color: white;
+    background: #5CADD3;
+    border-bottom: solid 3px #468CAD;
+    cursor: pointer;
+}
+
+.tab label:active /*tab*/
+{
+    background: #4494BB;
+}
+
+.tab label[for=tab-1] /*tab*/
+{
+    left: calc(50% - 200px);
+}
+
+.tab label[for=tab-2] /*tab*/
+{
+    left: calc(50% - 100px);
+}
+
+.tab label[for=tab-3] /*tab*/
+{
+    left: 50%;
+}
+
+.tab label[for=tab-4] /*tab*/
+{
+    left: calc(50% + 100px);
+}
+
+.tab label i /*tab*/
+{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: -16px;
+    color: #468CAD;
+    font-size: 1em;
+}
+
+#tabs div:first-child label /*tab*/
+{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.tab input[type=radio] /*tab*/
+{
+    display: none;
+}
+
+.tab .content /*tab*/
+{
+    width: 100%;
+    background-color: #F5F5F5;
+}
+
+input[type=radio]:checked ~ label /*tab bouton*/
+{
+    background-color: #5CADD3;
+    color: white;
+    z-index: 2;
+    border-top: none;
+    border-bottom: solid 3px #468CAD;
+}
+
+input[type=radio]:not(:checked) ~ label /*tab bouton*/
+{
+    border-bottom: solid 3px #E5E5E5;
+}
+
+input[type=radio]:not(:checked) ~ label i /*tab bouton*/
+{
+    display: none;
+}
+
+input[type=radio]:checked ~ label ~ .content /*tab bouton*/
+{
+    z-index: 1;
+}
+
+input[type=radio]:not(:checked) ~ label ~ .content /*tab bouton*/
+{
+    display: none;
+}
+
+#portfolio ul.flex /*listes projets*/
+{
+    flex-wrap: wrap;
+}
+
+.project /* project item*/
+{
+    position: relative;
+    width: 280px;
+    max-height: 186px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.project > img /*images*/
+{
+    width: 100%;
+    vertical-align: top;
+}
+
+.project_description /*description images*/
+{
+    position: absolute;
+    top: 250px;
+    height: 100%;
+    max-height: 186px;
+    width: 100%;
+    transition: all .9s ease;
+        -webkit-transition: all .9s ease;
+        -moz-transition: all .9s ease;
+        -o-transition: all .9s ease;
+    transition-delay: .1s;
+        -webkit-transition-delay: .1s;
+        -moz-transition-delay: .1s;
+        -o-transition-delay: .1s;
+    opacity: 0;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+}
+
+
+.project:hover .project_description, .project:active .project_description /*description images*/
+{
+    top: 55%;
+    opacity: 1;
+}
+
+.project_description .eye_icon /*icon images*/
+{
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+}
+
+.project_description i /*icon images*/
+{
+    position: absolute;
+    top: -20px;
+    left: 75%;
+    background: #5CADD2;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid white 2px;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.project_description h3, .project_description p /*descritpion images*/
+{
+    position: relative;
+    margin: 0;
+    transition: all .9s ease;
+        -webkit-transition: all .9s ease;
+        -moz-transition: all .9s ease;
+        -o-transition: all .9s ease;
+    color: white;
+}
+
+.project_description h3 /*titre images*/
+{
+    padding: 6px 10px 0px 10px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.project_description p /*patagraphe images*/
+{
+    left: 100%;
+    padding: 3px 10px 6px 10px;
+    line-height: 1em;
+}
+
+.project:hover h3, .project:hover p /*description au survol*/
+{
+    left: 0;
+}
+
+
+/* 6 ------------------------------ Section 4 Infos/contact/maps ------------------------------ */
+#contact 
+{
+    position: relative;
+}
+
+.google_maps, #conteneur_contact 
+{
+    width: 100%;
+    position: absolute;
+    height: 600px;
+}
+
+#conteneur_contact 
+{
+    background-color: rgba(92,173,211, .4);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+form 
+{
+    background-color: rgba(255,255,255, .8);
+    width: 300px;
+    height: 70%;
+    margin: 40px 150px;
+    padding: 20px; padding-right: 30px;
+    border-radius: 3px;
+}
+
+form h2 
+{
+    padding: 0px;
+    margin: 0px;
+    font-size: 180%;
+}
+
+input 
+{
+    width: 100%;
+    height: 25px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    padding-left: 10px; 
+}
+
+textarea 
+{
+    width: 100%;
+    height: 100px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+.bouton 
+{
+    color: white;
+    background-color: rgb(92,173,211); 
+    border-bottom: 3px solid rgb(70,140,173);
+    border-radius: 3px;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+/* 7 ------------------------------ Footer ------------------------------ */
+.p_page /*pied de page*/
+{
+    display: flex;
+    justify-content: center;
+}
+
+/* 8 ------------------------------ Medias ------------------------------*/
+/* ------------------------------ max-width: 900px ------------------------------ */
+@media all and (max-width: 900px) /*tablettes*/
+{
+    body /*toute la page*/
+    {
+        width: 100%;
+    }
+
+    #logo_menu1 .wrapper /* Menu hamburger block */
+    {
+        display: block;
+    }
+
+    #label_toggle /*burger pos*/
+    {
+        cursor: pointer;
+        display: block;
+        float: right;
+    } 
+
+    #menu1 .ul1 /*burger liste*/
+    {
+        visibility: hidden;
+        height: 0;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        transition: all 1s ease;
+        opacity: 0.5;
+    }
+
+    #menu1 .ul1 .li1 /*burger liste*/
+    {
+        display: block;
+        width: 100%;
+    }
+
+    #menu1 .ul1 .li1 .a1 /*burger liste*/
+    {
+        display: block;
+        width: 100%;
+        padding: 6px 0;
+        border-bottom: 1px solid #ccc;
+        color: transparent;
+        transition: none;
+    }
+
+    #menu1 .ul1 .li1 .a1:first-child /*burger liste*/
+    {
+        border-top: 1px solid #ccc;
+    }
+
+    #menu1 .ul1 .li1 .a1:last-child /*burger liste*/
+    {
+        border-bottom: none;
+    }
+
+    #menu1 #input_toggle:checked ~ .ul1 /*burger liste*/
+    {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #menu1 #input_toggle:checked ~ .ul1 .li1 .a1 /*burger liste*/
+    {
+        color: #555;
+    }
+
+    #menu1 #input_toggle:checked ~ .ul1 .li1 .a1:hover /*burger liste*/
+    {
+        color: #5CADD3;
+    }
+
+    .ti_projets/*projets titre et sous titre*/
+    {
+        width: 65%;
+    }
+
+    .te_services /*services titre et sous titre*/
+    {
+        width: 65%;
+
+    }
+
+    #pres_service/*img et description serv*/
+    {
+        display: flex;
+        flex-direction: column;
+            -webkit-flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .i_services /*services*/
+    {
+        width: 90%;
+
+    }
+
+    .i_services li /*services*/
+    {
+        margin-top: 20px;
+    }
+
+    section#services, section#portfolio /*sections*/
+    {
+        padding-top: 150px;
+    }
+
+    #conteneur_contact /*contact*/
+    {
+        justify-content: center;
+    }
+
+    form /*formulaire contact prend toute la largeur*/
+    {
+        margin: 0;
+        width: 80%; 
+    } 
+}
+
+/* ------------------------------ max-width: 650px ------------------------------ */
+@media all and (max-width: 650px) /*portable*/
+{
+
+    #menu1 .ul1 .li1 .a1 span /*supprimer accueil*/
+    {
+        display: none;
+    }  
+
+    #slider/*slider*/
+    {
+        display: none;
+    }
+
+    .li1s /*on enlève accueil*/
+    {
+        display: none;
+    }
+
+    #services /*services*/
+    {
+        flex-direction: column;
+            -webkit-flex-direction: column;
+        text-align: center;
+    }
+
+    .te_services /*projets titre et sous titre*/
+    {
+        width: 100%;
+    }
+
+    .ti_projets/*projets titre et sous titre*/
+    {
+        width: 100%;
+    }
+
+    footer/*pied de page*/
+    {
+        display: none;
+    }
+
+    /* menu et logo */
+    #logo_menu1 
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Section */
+    section#services, section#portfolio
+    {
+        padding-top: 200px;
+    }
+}
